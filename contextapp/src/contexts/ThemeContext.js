@@ -2,7 +2,6 @@ import React, { createContext, Component } from "react";
 
 export const ThemeContext = createContext();
 
-// context.provider - context를 구독하는 컴포넌트들에게 context 변화를 알리는 역할
 class ThemeContextProvider extends Component {
   state = {
     isLightTheme: true,
@@ -27,3 +26,6 @@ class ThemeContextProvider extends Component {
 }
 
 export default ThemeContextProvider;
+
+// AuthContext  new
+// isAuthenticated : false
