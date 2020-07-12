@@ -1,7 +1,7 @@
 import React, { Component, createContext } from "react";
 
 export const AuthContext = createContext();
-
+// 인증 정보(=AuthContext)
 class AuthContextProvider extends Component {
   state = {
     isAuthentocated: false,
