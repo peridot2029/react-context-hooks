@@ -10,7 +10,7 @@ class ThemeContextProvider extends Component {
     light: { syntax: "#555", ui: "#ddd", bg: "#eee" },
     dark: { syntax: "#ddd", ui: "#333", bg: "#555" },
   };
-  // toggleTheme function 정의 후, value 속성 전달
+  // toggleTheme function 정의 후, value 속성 전달.
   toggleTheme = () => {
     this.setState({ isLightTheme: !this.state.isLightTheme });
   };
