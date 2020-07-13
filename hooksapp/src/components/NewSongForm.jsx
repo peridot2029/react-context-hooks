@@ -17,7 +17,7 @@ const NewSongForm = ({ addSong }) => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <input type="submit" value="add song" />
+      <input type="submit" value="add" />
     </form>
   );
 };
