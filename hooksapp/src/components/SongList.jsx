@@ -8,9 +8,19 @@ const SongList = () => {
     { id: 2, title: "memory gospel" },
     { id: 3, title: "this wild darkness" },
   ]);
-  const addSong = () => {
-    setSongs([...songs, { id: uuid(), title: "new song" }]);
+  const [age, setAge] = useState(20);
+
+  const addSong = (title) => {
+    console.log("SongList title :", title);
+    setSongs([...songs, { id: uuid(), title }]);
   };
+  useEffect(() => {
+    console.log("useEffect callback", songs);
+  }, [songs]);
+  useEffect(() => {
+    console.log("useEffect callback", age);
+  }, [age]);
+
   return (
     <div className="song-list">
       <ul>
@@ -18,8 +28,8 @@ const SongList = () => {
           return <li key={song.id}>{song.title}</li>;
         })}
       </ul>
-      <button onClick={addSong}>Add a song</button>
       <NewSongForm addSong={addSong} />
+      <button onClick={() => setAge(age + 1)}>Add 1 to age: {age}</button>
     </div>
   );
 };
